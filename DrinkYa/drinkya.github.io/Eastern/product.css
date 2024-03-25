@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https: //fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700 & display =swap');
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto+Sans+TC:wght@700 & display =swap';
+}
+body{
+    background-image: url("white.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #ede1e3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_container > img{
+    width: 50px;
+    height: 50px;
+    user-select: none;
+}
+.logo_container a{
+    text-decoration: none;
+}
+.logo{
+    font-family: "Poppins", serif;
+    font-size: 2em;
+    color: rgb(33,36,41);
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 5px;
+    user-select: none;
+}
+.navbar > a{
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(33,36,41);
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.navbar > a > .en{
+    text-align: center;
+    font-size: 16px;
+    font-family: "Poppins";
+}
+.navbar > a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(33,36,41);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform.5s;
+}
+.navbar > a:hover{
+    color: rgb(33,36,41);
+}
+.navbar > a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.burger{
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 30px;
+    color: rgb(33,36,41);
+    display: none;
+}
+.back-top{
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: Alpha(opacity=50);
+    width: 45px;
+    height: 45px;
+    background:  center no-repeat ;
+    background-image: url('arrow.png');
+    border-radius: 12px;
+    border:none;
+    transform: translateY(0%);
+    transition: all 0.2s linear;
+}
+
+.back-top:hover{
+    opacity: 0.8;
+    filter: Alpha(opacity=80);
+    box-shadow: 0px 0px 6px #ffffff;
+}
+.info_container .nav{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 96px;
+    background-color: rgb(33,36,41);
+    margin-top: 0;
+    text-align: center;
+    transform: translateY(0);
+    transition: 0.3s ease-in;
+    z-index: 999;
+}
+
+.nav .show-nav{
+    display: block;
+    transition: 0.3s ease-in;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    transition: 0.4s ease-in;
+    padding-left: 0;
+}
+.nav ul li{
+    
+    color: #fff;
+    margin-top: 50px;
+    border-bottom: 1px dotted #000;
+    padding-bottom: 20px;
+    transition:  0.4s ease-in;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Noto+Sans+TC' ;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.nav ul li a:hover{
+    color: rgb(232,188,92);
+}
+.info_container > .info > .info-text>  .picture1{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 1000px;
+    bottom: -325px;;
+    overflow: hidden;
+}
+.info_container > .info > .info-text> .picture1 >.cow{
+    width: 200px;
+    height: 200px;
+}
+
+.info_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 165px;
+    margin-bottom: 4px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.info_container > .info{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    background-position: center;
+    z-index: 99;
+    overflow: hidden;
+    
+}
+
+.info_container > .info > .info-text{
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    overflow: hidden;
+}
+.info_container > .info > .info-text > h3{
+    width: 50%;  
+    border-bottom: 1px gray dotted ;
+    color: rgb(33,36,41);;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    padding-bottom: 10px;
+    font-size: 28px;
+    user-select: none;
+    text-align: start;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+.info_container > .info > .info-text > ul {
+    width: 100%;
+    font-size: 16px;
+    list-style: none;
+    border-left: 1px gray dotted;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.info_container > .info > .info-text > ul >li{
+    padding-top: 5px;
+    width: 100%;
+    color: rgb(33,36,41);
+}
+
+.info_container > .info >.info-img{
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+
+}
+
+.info_container > .info >.info-img > img{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+}
+
+.info_container > .info > .info-text{
+    margin-left: 50px;
+}
+.info_container > .info > .info-text > #ig {
+    margin-left: 30px;
+}
+.info_container > .info > .info-text > #fb{
+    margin-left: 100px;
+}
+.info_container > .info > .info-text > a >img{
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.info_container > .info > .info-text > a >img:hover{
+    transform: scale(1.2);
+}
+.info_container >.boxx2{
+    width: 40%;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    bottom: 220px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.info_container > .info > .info-text > .leafs{
+    width: 100%;
+    position: relative;
+    right: -400px;
+    top: -400px;
+}
+.info_container > .info > .info-text > .leafs > img{
+    height: 750px;
+}
+.menu_container{
+    max-width: 100%;
+    max-height: 100%;
+    background: url("https://www.dinggotea.com/themes/zh-tw/assets/images/i_con2.jpg");
+    height:1000px;
+    background-position: center ;
+    display: flex;
+    background-attachment: fixed;
+    overflow: hidden;
+    border-top: 1px rgb(33,36,41) solid;
+    border-bottom: 1px rgb(33,36,41) solid;
+}
+.menu_container > .drinkwhat{
+    width: 25%;
+    position: relative;
+    top: -150px;
+    left: 100px;
+
+}
+
+.menu_container > .drinkwhat > img{
+    width: 600px;
+    height: 500px;
+}
+.menu_container > .menu-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+    transform:  translateX(200%);
+    transition:  2s ease;
+}
+.menu_container > .menu-info > .menu-text{
+    margin-left: 100px;
+}
+.menu_container > .menu-info > .menu-text > h3{
+    border-bottom: 1px gray dotted ;
+    color:rgb(33,36,41);
+    padding-bottom: 10px;
+    font-size: 28px;
+    width: 150px;
+    user-select: none;
+    font-family: "Poppins";
+}
+.menu_container > .menu-info > .menu-text > h4{
+    color: rgb(33,36,41);;
+    padding-bottom: 10px;
+    width: 150px;
+    text-align: end;
+    user-select: none;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.menu_container > .menu-info > .menu-pic{
+    width: 100%;
+    
+}
+
+.menu_container > .menu-info > .menu-pic > img{
+    width: 350px;
+    height: 250px;
+    margin-left: 150px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+    transition: 1s;
+
+}
+
+.menu_container > .menu-info > .menu-pic > img:hover{
+    transform: scale(2.4);
+}
+
+.menu-info.show{
+    transform: translateX(0);
+}
+
+.section3{
+    width: 100%;
+    height: 100%;
+    background-image: url("section3.jpg");
+    background-position: 35%;
+    background-size: cover;
+    overflow: hidden;
+}
+.carousel{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: rgb(255,255,255,0.6);
+    padding-right: 350px;
+    padding-left: 350px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    margin: 50px;
+    backdrop-filter: blur(3px);
+    transform: translateX(-200%);
+    transition: 2s ease;
+}
+
+.carousel.show{
+    transform: translateX(0);
+}
+
+.carousel > .justdrink{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top:-350px;
+    left: -350px;
+}
+.carousel > .justdrink > img{
+    width: 100%; 
+}
+.carousel > .carousel-text{
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 100px;
+
+}
+.carousel > .carousel-text > h3{
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    border-bottom: 1px gray dotted ;
+    color: rgb(33,36,41);;
+   
+    padding-bottom: 10px;
+    font-size: 28px;
+    user-select: none;
+    text-align: start;
+    font-family: "Poppins";
+    margin-bottom: 20px;
+}
+.carousel > .carousel-text > p {
+   width: 100%;
+   max-height: 100%;
+   font-size: 16px;
+   background-color: rgb(255,255,255,0.8);
+   padding:20px;
+   margin-right: 50px;
+   border-radius: 10px;
+   backdrop-filter: blur(5px);
+   box-shadow: rgba(33, 36, 41, 0.4) -5px 5px, rgba(33, 36, 41, 0.3) -10px 10px, rgba(33, 36, 41, 0.2) -15px 15px, rgba(33, 36, 41, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+   
+}
+.carousel > .carousel-inner{
+    min-width: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel > .carousel-inner > .carousel-control-prev-icon{
+    color: black;
+}
+
+.carousel > .carousel-inner > .carousel-item.active{
+    transition: 0.3s ease;
+}
+
+.carousel > .carousel-inner > .carousel-item  >img{
+ min-width: 400px;
+ height: 300px;
+ transition: 0.3s ease;
+
+}
+.carousel > .carousel-inner > .carousel-item::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .3s;
+}
+.carousel > .carousel-inner > .carousel-item:hover::before{
+    background-color: rgba(255, 254, 254, 0.2);
+    transform: scale(1.2);
+   
+}
+
+.section4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section4 h3{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(33,36,41);;
+    font-size: 28px;
+    border-bottom: 1px gray dotted ;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.section4 .map{
+    width: 1008px;
+    height: 595px;
+    margin: 50px;
+    background-image: url('dingmap.jpg');
+}
+
+.section4 .map .map-info{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section4 .map .map-info button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.section4 .map .map-info button:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.section4 .map .map-info:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#map-link{
+    text-decoration: none;
+    color: #fff;
+}
+.section4 #comment{
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(247, 233, 127);
+    transition: 0.3s;
+}
+
+.section4 #comment:hover{
+    background-color: rgba(33,36,41,0.8);
+    color: #fff;
+}
+
+footer > .footer{
+    display: flex;
+    justify-content: center;
+}
+footer > div > p{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media(max-width: 992px){
+    header{
+        justify-content: center;
+    }
+    header .navbar{
+        display: none;
+    }
+    header .burger{
+        display: block;
+       
+    }
+    .info_container > .info > .info-text > h3{
+        width: 80%;
+    }
+    .menu_container .menu-info .menu-text{
+        margin-left: 0;
+        position: absolute;
+        top: 250px;
+        left: 100px;
+        
+    }
+    
+    .menu-info .menu-pic{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 300px;
+    }
+    .menu-info .menu-pic img{
+        margin-top: 50px;
+        min-width: 50%;
+        min-height: 200px;
+        transition: none;
+        
+    }
+    .menu_container > .menu-info > .menu-pic > img:hover{
+        transform: scale(1);
+    }
+
+    .carousel{
+        padding-top: 100px;
+        overflow: hidden;
+        
+    }
+    .carousel > .carousel-inner{
+        max-width: 150px;
+        max-height: 250px;
+        margin-bottom: 200px;
+    }
+    .carousel > .carousel-inner > .carousel-item  >img{
+        max-width: 150px;
+        max-height: 250px;
+    }
+    .carousel > .carousel-text{
+    width: 80%;
+    margin-left: 0;
+    position: absolute;
+    bottom: 1px;
+    margin-bottom: 100px;
+   }
+
+
+   .carousel > .carousel-text > h3{
+    font-size: 24px;
+   }
+
+   .carousel > .carousel-text > p{
+    max-width: 100%;
+    font-size: 14px;
+   
+   }
+
+   .section4 .map{
+   width: 800px;
+   height: 500px;
+   background-position: center;
+
+   }
+   .section4 h3{
+    font-size: 24px;
+   }
+
+    
+}
+
+@media(max-width: 768px){
+
+    .info_container > .info {
+        flex-direction: column;
+    }
+    .info_container >.boxx2 {
+        display: none;
+    }
+    .info_container > .info > .info-text > ul {
+        padding-bottom: 5px;
+    }
+    .info_container > .info >.info-img{
+        justify-content: center;
+        padding-top: 50px;
+    }
+    .info_container > .info > .info-text{
+        position: relative;
+        bottom: 200px;
+        margin-left: 0;
+        
+    }
+    .info_container > .info >.info-img{
+        padding-top: 0;
+    }
+    .info_container > .info >.info-img img{
+        width: 250px;
+        height: 200px;
+    }
+
+    .info_container > .info > .info-text > h3 {
+        font-size: 22px;
+        width: 100%;
+
+    }
+    .info_container > .info > .info-text > ul{
+        padding-bottom: 0;
+    }
+    .info_container > .info > .info-text > ul >li{
+        font-size: 11px;
+    }
+    .info_container > .info > .info-text > a >img{
+        width: 30px;
+        height: 30px;
+    }
+    .menu_container > .drinkwhat{
+        position: absolute;
+        top: 900px;
+        left: 20px;
+        
+    }
+    .menu_container > .drinkwhat > img {
+        width: 400px;
+        height: 300px;
+    }
+    .menu_container > .menu-info > .menu-pic{
+        width: 100%;
+        margin-right: 50px;
+    }
+    .menu_container > .menu-info > .menu-pic > img {
+        width: 250px;
+        height: 150px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .menu_container > .menu-info > .menu-text h3{
+        font-size: 18px;
+        width: 100px;
+    }
+    .menu_container > .menu-info > .menu-text h4{
+        font-size: 18px;
+        width: 100px;
+    }
+    .carousel{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .carousel > .carousel-inner{
+        min-width: 200px;
+        height: 150;
+        margin-bottom: 150px;
+    }
+
+    .carousel > .carousel-inner > .carousel-item >img {
+        min-width: 200px;
+        height: 150px;
+    }
+
+    .carousel > .carousel-text{
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .carousel > .carousel-text h3{
+        font-size: 16px;
+    }
+    .carousel > .carousel-text p{
+        font-size: 11px;
+    }
+    .section4 .map{
+        width: 300px;
+        height: 250px;
+        background-position: center;
+    }
+    .section4 h3{
+        font-size: 18px;
+    }
+    #map-link{
+        font-size: 18px;
+    }
+    #comment{
+        font-size: 14px;
+    }
+}
